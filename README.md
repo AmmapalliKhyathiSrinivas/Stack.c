@@ -105,7 +105,7 @@ int main() {
 
 
 #Output
-/* Pushed 10 onto the stack.
+/* Pushed 10 onto the stack.\n
 Pushed 20 onto the stack.
 Pushed 30 onto the stack.
 Stack elements: 10 20 30 
