@@ -1,115 +1,36 @@
-/*
- * Stack Implementation in C
- * Features:
- * 1. Push operation
- * 2. Pop operation
- * 3. Peek (Top element)
- * 4. Check if stack is empty
- * 5. Check if stack is full
- * 6. Get stack size
- * 7. Print all elements
- */
+Stack Implementation in C
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
+Overview
 
-#define MAX 100
+This project implements a stack data structure using an array in C. It demonstrates basic stack operations such as push, pop, peek, and size management.
 
-// Stack structure
-typedef struct {
-    int top;
-    int array[MAX];
-} Stack;
+Stack Representation
 
-// Function to initialize the stack
-void initStack(Stack *stack) {
-    stack->top = -1;
-}
+The program uses an array-based stack implementation with a fixed maximum size. It provides various functions to manipulate the stack efficiently.
 
-// Function to check if the stack is empty
-bool isEmpty(Stack *stack) {
-    return stack->top == -1;
-}
+Features
 
-// Function to check if the stack is full
-bool isFull(Stack *stack) {
-    return stack->top == MAX - 1;
-}
+Stack Initialization: Initializes an empty stack.
 
-// Function to push an element onto the stack
-void push(Stack *stack, int value) {
-    if (isFull(stack)) {
-        printf("Stack is full!\n");
-        return;
-    }
-    stack->array[++stack->top] = value;
-    printf("Pushed %d onto the stack.\n", value);
-}
+Push Operation: Adds an element to the top of the stack.
 
-// Function to pop an element from the stack
-int pop(Stack *stack) {
-    if (isEmpty(stack)) {
-        printf("Stack is empty!\n");
-        return -1;
-    }
-    return stack->array[stack->top--];
-}
+Pop Operation: Removes the top element from the stack.
 
-// Function to get the top element (peek)
-int peek(Stack *stack) {
-    if (isEmpty(stack)) {
-        printf("Stack is empty!\n");
-        return -1;
-    }
-    return stack->array[stack->top];
-}
+Peek Operation: Retrieves the top element without removing it.
 
-// Function to get the size of the stack
-int size(Stack *stack) {
-    return stack->top + 1;
-}
+Size Function: Returns the current size of the stack.
 
-// Function to print the elements of the stack
-void printStack(Stack *stack) {
-    if (isEmpty(stack)) {
-        printf("Stack is empty!\n");
-        return;
-    }
-    printf("Stack elements: ");
-    for (int i = 0; i <= stack->top; i++) {
-        printf("%d ", stack->array[i]);
-    }
-    printf("\n");
-}
+Check Empty/Full: Determines if the stack is empty or full.
 
-// Main function
-int main() {
-    Stack stack;
-    initStack(&stack);
+Print Stack: Displays all stack elements.
 
-    push(&stack, 10);
-    push(&stack, 20);
-    push(&stack, 30);
+Usage Example
 
-    printStack(&stack);
-    
-    printf("Top element: %d\n", peek(&stack));
-    printf("Stack size: %d\n", size(&stack));
-
-    printf("Popped element: %d\n", pop(&stack));
-    printStack(&stack);
-    
-    return 0;
-}
-
-
-Output:
- Pushed 10 onto the stack.
-Pushed 20 onto the stack.
-Pushed 30 onto the stack.
-Stack elements: 10 20 30 
+Sample Input & Output:
+Enter stack size: 5
+Pushing elements: 10, 20, 30
+Stack after pushes: [10, 20, 30]
 Top element: 30
-Stack size: 3
-Popped element: 30
-Stack elements: 10 20 
+Popping element: 30
+Stack after pop: [10, 20]
+Current stack size: 2
