@@ -84,7 +84,7 @@ void printStack(Stack *stack) {
 }
 
 // Main function
-t int main() {
+int main() {
     Stack stack;
     initStack(&stack);
 
