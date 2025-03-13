@@ -102,3 +102,14 @@ int main() {
     
     return 0;
 }
+
+
+#Output
+/* Pushed 10 onto the stack.
+Pushed 20 onto the stack.
+Pushed 30 onto the stack.
+Stack elements: 10 20 30 
+Top element: 30
+Stack size: 3
+Popped element: 30
+Stack elements: 10 20 */
