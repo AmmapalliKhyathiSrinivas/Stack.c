@@ -1,1 +1,12 @@
-
+Explanation:
+Stack Representation: The program uses an array-based stack implementation.
+Stack Functions:
+initStack(): Initializes the stack.
+isEmpty(): Checks if the stack is empty.
+isFull(): Checks if the stack is full.
+push(): Adds an element to the stack.
+pop(): Removes the top element from the stack.
+peek(): Returns the top element without removing it.
+size(): Returns the current stack size.
+printStack(): Prints all elements in the stack.
+Main Function: Demonstrates stack operations.
